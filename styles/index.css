@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 1px 16px 4px; 
+    background-color: rgb(250, 234, 237);
+}
+
+h1 {
+    text-align: center;
+    color: rgb(100, 51, 81);
+}
+
+  .menu {
+    list-style: none;
+    margin: 0;
+    padding: 15px; 
+    display: flex; 
+    justify-content: center;
+    gap: 8px; 
+    align-items: center;
+  }
+
+  .menu a {
+    color: rgb(100, 51, 81);
+    text-decoration: none;
+    display: inline;
+    padding: 15px 10px;
+    font-weight: 500;
+  }
+  .menu a:hover {
+    text-decoration: underline;
+}
+
+.carruse img {
+    width: 100%;
+}
+
+.about h2 {
+    text-align: center;
+    color: rgb(100, 51, 81);
+    font-size: 2.5rem;
+    padding: 0px;
+    margin: 10px;
+}
+.about p {
+    background: #fff; 
+    font-size: 1.3rem; 
+    max-width: 700px; 
+    margin: 10px auto;   
+    padding: 30px 50px;  
+    border-radius: 10px;  
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); 
+    text-align: center;      
+}
+
+  /* Contenedor: 80% del ancho, centrado */
+  .botones{
+    width: 80%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;    /* centra el grupo */
+    gap: 40px;                  /* ≈40px entre botones */
+    flex-wrap: wrap;            /* por si en móvil no entran */
+  }
+
+  /* Cada botón (enlace) se comporta como tarjeta */
+  .btn-img{
+    display: block;
+    flex: 1 1 0;                /* que puedan repartirse el ancho */
+    max-width: 400px;           /* evita que se hagan gigantes en pantallas muy grandes */
+    transform: translateY(0);
+    transition: transform .25s ease, box-shadow .25s ease, filter .25s ease;
+  }
+
+  /* La imagen ocupa todo el ancho del botón */
+  .btn-img img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 6px 14px rgba(0,0,0,.12);
+  }
+
+  /* Animación al hover: leve zoom + levantar + más sombra */
+  .btn-img:hover{
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 24px rgba(0,0,0,.16);
+    filter: saturate(1.05);
+  }
+
+  /* Accesibilidad: respeta usuarios con reducción de movimiento */
+  @media (prefers-reduced-motion: reduce){
+    .btn-img{ transition: none; }
+    .btn-img:hover{ transform: none; }
+  }
+
+  /* Ajustes responsivos opcionales */
+  @media (max-width: 900px){
+    .btn-img{ max-width: 320px; }
+    .botones{ gap: 24px; }      /* un poco menos de gap en pantallas chicas */
+  }
+
+footer {
+    display: flex;
+    justify-content: space-between; /* 👈 uno a la izq, otro a la der */
+    align-items: center;
+    padding: 40px;
+    background: rgb(250, 234, 237);
+    color: black;
+  }
+#contacto {
+    font-weight: bold;
+    font-size: 25px;
+  }
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px; /* espacio entre los elementos de la lista */
+  }
+
+  footer a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+  }
+
+  footer a:hover {
+    text-decoration: underline;
+  }
+
+  .ig {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* espacio entre logo y texto */
+    font-size: 25px;
+    color: black;
+  }
+
+  .ig img {
+    width: 24px;
+    height: 24px;
+  }
